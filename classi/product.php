@@ -1,8 +1,11 @@
 <?php
 include_once __DIR__ . '/category.php';
+
+include_once __DIR__.'/../traits/HasName.php' ;
 class Product{
+    use HasName;
+
     public $image;
-    public $name;
     public $price;
     public $category;
     public $availability;

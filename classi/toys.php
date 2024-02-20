@@ -1,10 +1,10 @@
 <?php
 
 include_once __DIR__ . '/product.php';
+include_once __DIR__.'/../traits/HasMaterial.php' ;
 
   class Toys extends Product{
-     public $characteristics;
-     public $dimensions;
+      use HasMaterial;
 
      public function __construct( 
 
@@ -13,9 +13,9 @@ include_once __DIR__ . '/product.php';
             Float $price,
             Category $category,
             String $availability,
-            String $characteristics,)
+            String $material,)
      {
-        $this->characteristics = $characteristics;
+        $this->material = $material;
          parent ::__construct( $image, $name, $price, $category, $availability);
      }
   }

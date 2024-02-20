@@ -1,7 +1,12 @@
 <?php
+
+include_once __DIR__.'/../traits/HasName.php' ;
+
 class Category{
-   public $name;
-   public function __construct(String $name)
+
+  use HasName;
+
+   public function __construct($name)
    {
     $this->name = $name;
    } 

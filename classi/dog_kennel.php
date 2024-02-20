@@ -1,7 +1,11 @@
 <?php
 include_once __DIR__ . '/product.php';
+
+include_once __DIR__.'/../traits/HasMaterial.php' ;
   class DogKennel extends Product{
-    public $material;
+   
+    use HasMaterial;
+
     public $dimensions;
 
     public function __construct(
